@@ -1,0 +1,6 @@
+@LD4_HostAddress = http://localhost:5295
+
+GET {{LD4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
