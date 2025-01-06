@@ -22,9 +22,7 @@ public class Course
     [ForeignKey(nameof(Instructor))]
     public required int InstructorId { get; set; }
 
-    [JsonIgnore]
     public Instructor Instructor { get; }
 
-    [JsonIgnore]
     public List<Student> Students { get; }
 }

@@ -19,6 +19,5 @@ public class Instructor
     [Required]
     public DateOnly JoinedOn { get; set; }
 
-    [JsonIgnore]
     public List<Course> Courses { get; } = [];
 }

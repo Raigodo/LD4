@@ -28,6 +28,12 @@ public class AppDbContext : DbContext
             .Property(s => s.Id)
             .ValueGeneratedOnAdd();
 
+        modelBuilder.Entity<Course>()
+            .HasOne(x => x.Instructor)
+            .WithMany(x => x.Courses)
+            .HasForeignKey(x => x.InstructorId)
+            .OnDelete(DeleteBehavior.SetNull);
+
         var instructors = new Instructor[]
         {
             new()
